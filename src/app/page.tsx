@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 
 export default function Home() {
@@ -105,6 +106,12 @@ export default function Home() {
                         Instantly deploy your Next.js site to a shareable URL with Vercel.
                     </p>
                 </a>
+                <Button
+                    variant="outline"
+                    //onClick={() => console.log('test')}
+                >
+                    Test
+                </Button>
             </div>
         </main>
     );
