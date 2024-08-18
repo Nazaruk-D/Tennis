@@ -9,7 +9,9 @@
         "lint": "next lint",
         "open-browser": "start http://localhost:3000",
         "format": "biome format --write \"./src\"",
-        "lefthook": "lefthook"
+        "lefthook": "lefthook",
+        "find-deadcode": "ts-prune -p ./tsconfig.json -e -i \"(.tailwind.config.ts)|(.next)\"",
+        "eslint": "eslint --fix --ext .ts,.tsx \"./src\""
     },
     "dependencies": {
         "next": "14.2.5",
@@ -26,6 +28,7 @@
         "lefthook": "1.7.14",
         "postcss": "8.4.31",
         "tailwindcss": "3.4.10",
+        "ts-prune": "0.10.3",
         "typescript": "5.5.4"
     }
 }

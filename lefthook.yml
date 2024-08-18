@@ -17,6 +17,8 @@
        stage_fixed: true
      typescript:
        run: tsc --noEmit
+     find_deadcode:
+       run: npm run find-deadcode
 
  post-commit:
    commands:
