@@ -1,0 +1,24 @@
+ pre-commit:
+   parallel: true
+   commands:
+     build:
+       run: npm run lefthook run build-checks
+     format:
+       glob: "*.{js,ts,jsx,tsx,json,md,mdx,css.html,yml}"
+       run: npx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
+       stage_fixed: true
+
+ build-checks:
+   parallel: true
+   commands:
+     eslint:
+       glob: "*.{ts,tsx}"
+       run: npm run eslint --fix {staged_files}
+       stage_fixed: true
+     typescript:
+       run: tsc --noEmit
+
+ post-commit:
+   commands:
+     update-index:
+       run: git update-index --again
