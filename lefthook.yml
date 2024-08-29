@@ -1,5 +1,5 @@
  pre-commit:
-   parallel: true
+   parallel: false
    commands:
      build:
        run: npm run lefthook run build-checks
@@ -13,7 +13,7 @@
    commands:
      eslint:
        glob: "*.{ts,tsx}"
-       run: npm run eslint --fix {staged_files}
+       run: npm run eslint {staged_files}
        stage_fixed: true
      typescript:
        run: tsc --noEmit

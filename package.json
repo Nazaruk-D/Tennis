@@ -10,8 +10,9 @@
         "open-browser": "start http://localhost:3000",
         "format": "biome format --write \"./src\"",
         "lefthook": "lefthook",
-        "find-deadcode": "ts-prune -p ./tsconfig.json -e -i \"(.tailwind.config.ts)|(.next)\"",
-        "eslint": "eslint --fix --ext .ts,.tsx \"./src\""
+        "find-deadcode": "ts-prune -p ./tsconfig.json -e -i \"(.tailwind.config.ts)|(.next)|(page.tsx)|(layout.tsx)\"",
+        "eslint": "eslint --fix --ext .ts,.tsx \"./src\"",
+        "ts-check": "tsc --noEmit"
     },
     "dependencies": {
         "@radix-ui/react-slot": "^1.1.0",
