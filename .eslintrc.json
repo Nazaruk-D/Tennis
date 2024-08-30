@@ -36,6 +36,7 @@
         "use-effect-no-deps/use-effect-no-deps": "error",
         "no-type-assertion/no-type-assertion": "error",
         "ternary/no-dupe": "warn",
-        "ternary/no-unreachable": "error"
+        "ternary/no-unreachable": "error",
+        "@typescript-eslint/no-require-imports": 0
     }
 }
